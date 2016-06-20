@@ -1,4 +1,4 @@
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from django.core.urlresolvers import reverse
 from django.template import Library, Context, loader
 
@@ -30,7 +30,7 @@ def jfu(
     } )
 
     # Use the request context variable, injected
-    # by django.core.context_processors.request,
+    # by django.template.context_processors.request,
     # to generate the CSRF token.
     context.update( csrf( context.get('request') ) )
 

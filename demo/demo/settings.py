@@ -156,8 +156,8 @@ def project_root( request ):
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'demo.settings.project_root',   
-    'django.core.context_processors.request',
-    'django.core.context_processors.static'
+    'django.template.context_processors.request',
+    'django.template.context_processors.static'
 )
 
 ALLOWED_HOSTS = [
