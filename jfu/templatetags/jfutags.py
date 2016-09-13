@@ -32,8 +32,9 @@ def jfu(
     # Use the request context variable, injected
     # by django.template.context_processors.request,
     # to generate the CSRF token.
-    context.update( csrf( context.get('request') ) )
+    request = context.get('request')
+    context.update( csrf( request ) )
 
     t = loader.get_template( template_name )
 
-    return t.render( Context( context ), context.get('request') )
+    return t.render( Context( context ), request )
