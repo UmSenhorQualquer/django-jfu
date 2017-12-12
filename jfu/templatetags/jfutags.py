@@ -1,7 +1,7 @@
 from django.template.context_processors import csrf
 from django.urls import reverse
 from django.template import Library, RequestContext, loader
-
+ 
 register = Library()
 
 @register.simple_tag( takes_context = True )
