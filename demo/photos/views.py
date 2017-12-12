@@ -1,6 +1,6 @@
 import os
 from django.conf import settings
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.views import generic
 from django.views.decorators.http import require_POST
 from jfu.http import upload_receive, UploadResponse, JFUResponse
